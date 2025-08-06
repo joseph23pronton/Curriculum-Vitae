@@ -41,9 +41,7 @@ namespace Curriculum_Vitae
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Menu nextMenu = new Menu();
-            nextMenu.Show();
-            this.Hide();
+            
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -63,6 +61,13 @@ namespace Curriculum_Vitae
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void continueButton_Click(object sender, EventArgs e)
+        {
+            Menu nextMenu = new Menu();
+            nextMenu.Show();
+            this.Hide();
         }
     }
 }

@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CV_Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CV_Form4.Designer.cs">
+      <DependentUpon>CV_Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CV_Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CV_Form3.Designer.cs">
+      <DependentUpon>CV_Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CV_Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CV_Form2.Designer.cs">
+      <DependentUpon>CV_Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="CV_Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,8 +88,23 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pink.Designer.cs">
+      <DependentUpon>Pink.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CV_Form4.resx">
+      <DependentUpon>CV_Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CV_Form3.resx">
+      <DependentUpon>CV_Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CV_Form2.resx">
+      <DependentUpon>CV_Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CV_Form1.resx">
       <DependentUpon>CV_Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pink.resx">
+      <DependentUpon>Pink.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

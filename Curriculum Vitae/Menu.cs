@@ -31,21 +31,21 @@ namespace Curriculum_Vitae
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CV_Form1 newCV_Form1 = new CV_Form1();
+            CV_Form2 newCV_Form1 = new CV_Form2();
             newCV_Form1.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CV_Form1 newCV_Form1 = new CV_Form1();
+            CV_Form3 newCV_Form1 = new CV_Form3();
             newCV_Form1.Show();
             this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            CV_Form1 newCV_Form1 = new CV_Form1();
+            CV_Form4 newCV_Form1 = new CV_Form4();
             newCV_Form1.Show();
             this.Hide();
         }

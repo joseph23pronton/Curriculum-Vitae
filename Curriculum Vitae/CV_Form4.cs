@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Curriculum_Vitae
 {
-    public partial class CV_Form1 : Form
+    public partial class CV_Form4 : Form
     {
-        public CV_Form1()
+        public CV_Form4()
         {
             InitializeComponent();
-            this.Load += CV_Form1_Load;
+            this.Load += CV_Form4_Load;
         }
 
         private void EnableScrollablePanel()
@@ -47,7 +47,7 @@ namespace Curriculum_Vitae
 
         }
 
-        private void CV_Form1_Load(object sender, EventArgs e)
+        private void CV_Form4_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             EnableScrollablePanel();
@@ -161,11 +161,20 @@ namespace Curriculum_Vitae
 
         private void button1(object sender, EventArgs e)
         {
-            string fullname = textBox2.Text +", " + textBox1.Text + " " + textBox3.Text;
+            string fullname = textBox2.Text +", " + textBox1.Text + " " + textBox3.Text + " " + suffix.Text;
             string email = textBox6.Text;
             string phonenumber = textBox5.Text;
             string full_address = textBox7.Text + " " + textBox8.Text + " " + textBox4.Text + " " + textBox10.Text;
             string objectives = objective_text.Text;
+            string nationality = textBox9.Text;
+            string junior_high_school = textBox19.Text;
+            string junior_high_year = textBox17.Text;
+            string senior_high_school = textBox22.Text;
+            string senior_high_year = textBox20.Text;
+            string college_school = textBox25.Text;
+            string college_year = textBox23.Text;
+
+
 
 
             this.Close();
@@ -180,11 +189,6 @@ namespace Curriculum_Vitae
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
         }

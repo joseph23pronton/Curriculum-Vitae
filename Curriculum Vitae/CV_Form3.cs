@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Curriculum_Vitae
 {
-    public partial class CV_Form1 : Form
+    public partial class CV_Form3 : Form
     {
-        public CV_Form1()
+        public CV_Form3()
         {
             InitializeComponent();
-            this.Load += CV_Form1_Load;
+            this.Load += CV_Form3_Load;
         }
 
         private void EnableScrollablePanel()
@@ -47,7 +47,7 @@ namespace Curriculum_Vitae
 
         }
 
-        private void CV_Form1_Load(object sender, EventArgs e)
+        private void CV_Form3_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             EnableScrollablePanel();
@@ -180,11 +180,6 @@ namespace Curriculum_Vitae
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
         }
