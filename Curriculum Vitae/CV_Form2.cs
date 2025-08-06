@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Curriculum_Vitae
 {
-    public partial class CV_Form1 : Form
+    public partial class CV_Form2 : Form
     {
-        public CV_Form1()
+        public CV_Form2()
         {
             InitializeComponent();
             this.Load += CV_Form1_Load;
@@ -180,11 +180,6 @@ namespace Curriculum_Vitae
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
         }
