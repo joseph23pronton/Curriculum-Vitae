@@ -17,6 +17,7 @@ namespace Curriculum_Vitae
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            testc;
         }
     }
 }
