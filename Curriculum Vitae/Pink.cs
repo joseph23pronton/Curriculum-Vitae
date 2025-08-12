@@ -20,7 +20,7 @@ namespace Curriculum_Vitae
         {
             InitializeComponent();
             full_name_text.Text = fullname;
-            email_label.Text = email;
+            phonenumber_label.Text = email;
             phonenumber_label.Text = phonenumber;
             address_label.Text = full_address;
             objective_text.Text = objectives;
@@ -52,6 +52,16 @@ namespace Curriculum_Vitae
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pink_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
