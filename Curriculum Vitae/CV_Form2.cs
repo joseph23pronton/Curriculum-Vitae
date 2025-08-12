@@ -169,8 +169,8 @@ namespace Curriculum_Vitae
 
 
             this.Close();
-            Pink pink = new Pink(fullname, email, phonenumber, full_address, objectives);
-            pink.Show();
+            Jamaeca_M jamaeca = new Jamaeca_M();
+            jamaeca.Show();
             this.Hide();
         }
 

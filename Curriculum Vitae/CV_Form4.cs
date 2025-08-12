@@ -162,35 +162,66 @@ namespace Curriculum_Vitae
         private void button1(object sender, EventArgs e)
         {
             string fullname = textBox2.Text +", " + textBox1.Text + " " + textBox3.Text + " " + suffix.Text;
-            string email = textBox6.Text;
-            string phonenumber = textBox5.Text;
+            string email = email_textbox.Text;
+            string phonenumber = phonenumber_textbox.Text;
             string full_address = textBox7.Text + " " + textBox8.Text + " " + textBox4.Text + " " + textBox10.Text;
             string objectives = objective_text.Text;
             string nationality = textBox9.Text;
-            string junior_high_school = textBox19.Text;
-            string junior_high_year = textBox17.Text;
-            string senior_high_school = textBox22.Text;
-            string senior_high_year = textBox20.Text;
-            string college_school = textBox25.Text;
+            string jhs = jhs_textbox.Text;
+            string jhs_year = textBox17.Text;
+            string shs = shs_textbox.Text;
+            string shs_year = textBox20.Text;
+            string college = college_textbox.Text;
             string college_year = textBox23.Text;
+            string birthday = birthday_textbox.Text;
+            string company_name = company_name_textbox.Text;
+            string experience = experience_textbox.Text;
+            string skills = skills_textbox.Text;
+            string sex = sex_combobox.Text;
 
 
-
-
-            this.Close();
-            Pink pink = new Pink(fullname, email, phonenumber, full_address, objectives);
-            pink.Show();
-            this.Hide();
+            if (pictureBox2.Image != null)
+            {
+                this.Close();
+                Pink pink = new Pink(fullname, email, phonenumber, full_address, objectives, jhs, jhs_year, shs, shs_year, college, college_year, nationality, birthday, company_name, experience, skills, sex, pictureBox2.Image);
+                pink.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please insert an image first.");
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                ofd.Title = "Select an Image";
 
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox2.Image = Image.FromFile(ofd.FileName);
+                    pictureBox2.SizeMode = PictureBoxSizeMode.Zoom; // Makes it fit nicely
+                }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
