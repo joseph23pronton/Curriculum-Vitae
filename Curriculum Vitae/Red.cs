@@ -22,7 +22,7 @@ namespace Curriculum_Vitae
             // Put Form3 data into the red CV
             full_name_text.Text = fullname;
             phonenumber_label.Text = "📞 " + phonenumber;
-            email_label.Text = "📧 " + email;
+            email_label.Text = email;
             address_label.Text = "📍 " + full_address;
             objectives_label.Text = objectives;
             jhs_label.Text = jhs;
@@ -41,6 +41,11 @@ namespace Curriculum_Vitae
             // Set the photo
             pictureBox2.Image = img;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

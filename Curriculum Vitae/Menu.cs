@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calculator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,13 @@ namespace Curriculum_Vitae
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            calcu calculator = new calcu();
+            calculator.Show();
+            this.Hide();
         }
     }
 }

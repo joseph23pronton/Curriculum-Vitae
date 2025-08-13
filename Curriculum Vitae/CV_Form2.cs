@@ -170,28 +170,22 @@ namespace Curriculum_Vitae
 
             // You need to collect these additional fields from your form:
             // Add textboxes for these if you don't have them yet
-            string jhs = ""; // Add textbox for Junior High School
-            string jhs_year = ""; // Add textbox for JHS graduation year
-            string shs = ""; // Add textbox for Senior High School  
-            string shs_year = ""; // Add textbox for SHS graduation year
-            string college = ""; // Add textbox for College
-            string college_year = ""; // Add textbox for college graduation year
-            string nationality = ""; // Add textbox for nationality
-            string birthday = ""; // Add textbox for birthday
-            string company_name = ""; // Add textbox for company name
-            string experience = ""; // Add textbox for work experience
-            string skills = ""; // Add textbox for skills
-            string sex = ""; // Add textbox or combobox for gender
+            string jhs = textBox19.Text; // Add textbox for Junior High School
+            string jhs_year = textBox17.Text; // Add textbox for JHS graduation year
+            string shs = textBox22.Text; // Add textbox for Senior High School  
+            string shs_year = textBox20.Text; // Add textbox for SHS graduation year
+            string college = textBox25.Text; // Add textbox for College
+            string college_year = textBox23.Text; // Add textbox for college graduation year
+            string nationality = textBox9.Text; // Add textbox for nationality
+            string birthday = textBox11.Text; // Add textbox for birthday
+            string company_name = textBox26.Text; // Add textbox for company name
+            string experience = richTextBox3.Text; // Add textbox for work experience
+            string skills = richTextBox4.Text; // Add textbox for skills
+            string sex = sex_combobox.Text; // Add textbox or combobox for gender
 
-            // Get image from PictureBox (assuming you have pictureBox2 for profile pic)
-            Image profileImage = null;
             if (pictureBox2.Image != null)
             {
-                profileImage = pictureBox2.Image;
-            }
-
-            // Create and show the new CV form
-            MintChocolateCV cvForm = new MintChocolateCV(
+                MintChocolateCV cvForm = new MintChocolateCV(
                 fullname,
                 email,
                 phonenumber,
@@ -209,21 +203,44 @@ namespace Curriculum_Vitae
                 experience,
                 skills,
                 sex,
-                profileImage
+                pictureBox2.Image
             );
 
-            cvForm.Show();
-            this.Hide(); // Hide the current form
+                cvForm.Show();
+                this.Hide(); // Hide the current form
+            }
+            else
+            {
+                MessageBox.Show("Please insert an image first.");
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                ofd.Title = "Select an Image";
 
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox2.Image = Image.FromFile(ofd.FileName);
+                    pictureBox2.SizeMode = PictureBoxSizeMode.Zoom; // Makes it fit nicely
+                }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
     }
 }
