@@ -94,6 +94,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MintChocolateCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MintChocolateCV.Designer.cs">
+      <DependentUpon>MintChocolateCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pink.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Red.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Red.Designer.cs">
+      <DependentUpon>Red.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BlueForm.resx">
       <DependentUpon>BlueForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +138,9 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MintChocolateCV.resx">
+      <DependentUpon>MintChocolateCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pink.resx">
       <DependentUpon>Pink.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +153,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Red.resx">
+      <DependentUpon>Red.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
