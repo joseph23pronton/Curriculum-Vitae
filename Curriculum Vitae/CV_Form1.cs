@@ -169,34 +169,52 @@ namespace Curriculum_Vitae
             string objectives = objective_text.Text;
 
             // You need to add these textboxes to your form or set default values
-            string jhs = "Your Junior High School"; // Replace with actual textbox
-            string jhs_year = "2018-2020"; // Replace with actual textbox
-            string shs = "Your Senior High School"; // Replace with actual textbox  
-            string shs_year = "2020-2022"; // Replace with actual textbox
-            string college = "Your College"; // Replace with actual textbox
-            string college_year = "2022-2026"; // Replace with actual textbox
-            string nationality = "Filipino"; // Replace with actual textbox
-            string birthday = "January 1, 2000"; // Replace with actual textbox
-            string company_name = "Company Name"; // Replace with actual textbox
-            string experience = "Work experience details"; // Replace with actual textbox
-            string skills = "Your skills"; // Replace with actual textbox
-            string sex = "Male/Female"; // Replace with actual textbox
+            string jhs = textBox19.Text; // Replace with actual textbox
+            string jhs_year = textBox17.Text; // Replace with actual textbox
+            string shs = textBox22.Text; // Replace with actual textbox  
+            string shs_year = textBox20.Text; // Replace with actual textbox
+            string college = textBox25.Text; // Replace with actual textbox
+            string college_year = textBox23.Text; // Replace with actual textbox
+            string nationality = textBox9.Text; // Replace with actual textbox
+            string birthday = textBox11.Text; // Replace with actual textbox
+            string company_name = textBox26.Text; // Replace with actual textbox
+            string experience = richTextBox3.Text; // Replace with actual textbox
+            string skills = richTextBox4.Text; // Replace with actual textbox
+            string sex = comboBox2.Text; // Replace with actual textbox
 
             // Default image (you can change this to load from file)
             Image defaultImage = new Bitmap(150, 150);
 
+            if (pictureBox2.Image != null)
+            {
+                this.Close();
+                BlueForm blueForm = new BlueForm(fullname, email, phonenumber, full_address,
+                                objectives, jhs, jhs_year, shs, shs_year, college, college_year,
+                                nationality, birthday, company_name, experience, skills, sex, pictureBox2.Image);
+                blueForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please insert an image first.");
+            }
             // Create and show the BlueForm with all the data
-            BlueForm blueForm = new BlueForm(fullname, email, phonenumber, full_address,
-                objectives, jhs, jhs_year, shs, shs_year, college, college_year,
-                nationality, birthday, company_name, experience, skills, sex, defaultImage);
-
-            blueForm.Show();
-            this.Hide();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                ofd.Title = "Select an Image";
 
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox2.Image = Image.FromFile(ofd.FileName);
+                    pictureBox2.SizeMode = PictureBoxSizeMode.Zoom; // Makes it fit nicely
+                }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

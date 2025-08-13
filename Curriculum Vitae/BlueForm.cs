@@ -60,6 +60,9 @@ namespace Curriculum_Vitae
             this.BackColor = Color.FromArgb(240, 248, 255); // AliceBlue
             this.Text = "Professional CV - " + fullname;
 
+            
+
+
             // Populate form data
             full_name_text.Text = fullname;
             full_name_text.ForeColor = Color.FromArgb(25, 25, 112); // MidnightBlue
@@ -118,6 +121,16 @@ namespace Curriculum_Vitae
             pictureBox2.Image = img;
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.BorderStyle = BorderStyle.FixedSingle;
+            college_label.Text = college;
+            shs_label.Text = shs;
+            shs_year_label.Text = shs_year;
+            jhs_label.Text = jhs;
+            jhs_year_label.Text = jhs_year;
+            company_name_label.Text = company_name;
+            experience_label.Text = experience;
+            skills_label.Text = skills;
+            pictureBox2.Image = img;
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
 
             // Add section headers styling
             StyleSectionHeaders();
@@ -308,6 +321,7 @@ namespace Curriculum_Vitae
             skills_label.Font = new Font("Segoe UI", 10, FontStyle.Regular);
             skills_label.ForeColor = Color.FromArgb(47, 79, 79);
             this.Controls.Add(skills_label);
+
         }
 
         private void EnableScrollablePanel()
@@ -353,6 +367,7 @@ namespace Curriculum_Vitae
         private void BlueForm_Load(object sender, EventArgs e)
         {
             // Add any initialization code here
+
         }
 
         // Event handlers (keep empty as in original)
