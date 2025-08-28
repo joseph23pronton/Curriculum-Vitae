@@ -82,6 +82,18 @@
     <Compile Include="CV_Form1.Designer.cs">
       <DependentUpon>CV_Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="CV_FormD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CV_FormD.Designer.cs">
+      <DependentUpon>CV_FormD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CV_GeneratedFormD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CV_GeneratedFormD.Designer.cs">
+      <DependentUpon>CV_GeneratedFormD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </Compile>
     <Compile Include="Jamaeca M. Dagonio.Designer.cs">
       <DependentUpon>Jamaeca M. Dagonio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -120,6 +138,8 @@
     <Compile Include="Red.Designer.cs">
       <DependentUpon>Red.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="BlueForm.resx">
       <DependentUpon>BlueForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,11 +158,20 @@
     <EmbeddedResource Include="CV_Form1.resx">
       <DependentUpon>CV_Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CV_FormD.resx">
+      <DependentUpon>CV_FormD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CV_GeneratedFormD.resx">
+      <DependentUpon>CV_GeneratedFormD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Jamaeca M. Dagonio.resx">
       <DependentUpon>Jamaeca M. Dagonio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -161,6 +190,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Red.resx">
       <DependentUpon>Red.cs</DependentUpon>

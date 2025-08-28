@@ -47,6 +47,10 @@ namespace Curriculum_Vitae
         private void CV_Form3_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            if (Session.LoggedInUser != null)
+            {
+                lblUserInfo.Text = Session.LoggedInUser.Username;
+            }
             EnableScrollablePanel();
         }
 

@@ -17,57 +17,57 @@ namespace Curriculum_Vitae
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-                
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Menu nextMenu = new Menu();
-            nextMenu.Show();
-            this.Hide();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-      
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Menu nextMenu = new Menu();
-            nextMenu.Show();
-            this.Hide();
-        }
-
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Menu nextMenu = new Menu();
-            nextMenu.Show();
-            this.Hide();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.Text = "Title Page";
+
+            if (Session.LoggedInUser != null)
+            {
+                lblUserInfo.Text = Session.LoggedInUser.Username;
+            }
+        }
+
+        private void lnkPronton_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void lnkPadua_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void lnkRoberto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void lnkDagonio_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+     
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void continueButton_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            Menu nextMenu = new Menu();
-            nextMenu.Show();
+            Session.LoggedInUser = null;
             this.Hide();
+            var login = new Login();
+            login.Show();
         }
     }
 }

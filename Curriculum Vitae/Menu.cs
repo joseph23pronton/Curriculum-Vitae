@@ -18,61 +18,57 @@ namespace Curriculum_Vitae
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
-            
+            if (Session.LoggedInUser != null)
+            {
+                lblUserInfo.Text = Session.LoggedInUser.Username;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDagonio_Click(object sender, EventArgs e)
         {
-            CV_Form1 newCV_Form1 = new CV_Form1();
-            newCV_Form1.Show();
+            CV_FormD newCV_FormD = new CV_FormD();
+            newCV_FormD.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRoberto_Click(object sender, EventArgs e)
         {
             CV_Form2 newCV_Form1 = new CV_Form2();
             newCV_Form1.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnPadua_Click(object sender, EventArgs e)
         {
             CV_Form3 newCV_Form1 = new CV_Form3();
             newCV_Form1.Show();
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnPronton_Click(object sender, EventArgs e)
         {
             CV_Form4 newCV_Form1 = new CV_Form4();
             newCV_Form1.Show();
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+      
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
-            form1.Show();
+            Form1 form = new Form1();
+            form.Show();
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            calcu calculator = new calcu();
-            calculator.Show();
+            Session.LoggedInUser = null;
             this.Hide();
+            var login = new Login();
+            login.Show();
         }
     }
 }

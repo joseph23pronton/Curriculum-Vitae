@@ -50,6 +50,11 @@ namespace Curriculum_Vitae
         private void CV_Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+
+            if (Session.LoggedInUser != null)
+            {
+                lblUserInfo.Text = Session.LoggedInUser.Username;
+            }
             EnableScrollablePanel();
         }
 
@@ -236,11 +241,13 @@ namespace Curriculum_Vitae
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            menu.Show();
+            Session.LoggedInUser = null;
             this.Hide();
+            var login = new Login();
+            login.Show();
         }
     }
 }
