@@ -201,7 +201,7 @@ namespace Curriculum_Vitae
                 else if (ctrl is ComboBox cb)
                 {
                     // to filter or ignore something like ung combobox
-                    if (cb.Name == "suffix")
+                    if (cb.Name == "comboBox1")
                         continue;
 
                     if (string.IsNullOrWhiteSpace(cb.Text))
@@ -227,7 +227,7 @@ namespace Curriculum_Vitae
         {
             if (!ValidateAllFields()) return;
             // Collect all data from Form3 textboxes
-            string fullname = textBox2.Text + ", " + textBox1.Text + " " + textBox3.Text;
+            string fullname = textBox2.Text + ", " + textBox1.Text + " " + textBox3.Text + " " + comboBox1.Text;
             string email = textBox6.Text;
             string phonenumber = textBox5.Text;
             string full_address = textBox7.Text + " " + textBox8.Text + " " + textBox4.Text + " " + textBox10.Text;

@@ -30,15 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.loginform = new System.Windows.Forms.Panel();
+            this.closePassword = new System.Windows.Forms.Button();
+            this.openPassword = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.openPassword = new System.Windows.Forms.Button();
-            this.closePassword = new System.Windows.Forms.Button();
             this.loginform.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +47,6 @@
             this.loginform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.loginform.Controls.Add(this.closePassword);
             this.loginform.Controls.Add(this.openPassword);
-            this.loginform.Controls.Add(this.checkBox1);
             this.loginform.Controls.Add(this.lblPassword);
             this.loginform.Controls.Add(this.lblUsername);
             this.loginform.Controls.Add(this.btnLogin);
@@ -56,10 +54,32 @@
             this.loginform.Controls.Add(this.txtUsername);
             this.loginform.Controls.Add(this.pictureBox1);
             this.loginform.Location = new System.Drawing.Point(86, 105);
-            this.loginform.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginform.Margin = new System.Windows.Forms.Padding(2);
             this.loginform.Name = "loginform";
             this.loginform.Size = new System.Drawing.Size(304, 430);
             this.loginform.TabIndex = 0;
+            // 
+            // closePassword
+            // 
+            this.closePassword.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.eye_closed;
+            this.closePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.closePassword.Location = new System.Drawing.Point(226, 276);
+            this.closePassword.Name = "closePassword";
+            this.closePassword.Size = new System.Drawing.Size(40, 27);
+            this.closePassword.TabIndex = 8;
+            this.closePassword.UseVisualStyleBackColor = true;
+            this.closePassword.Click += new System.EventHandler(this.closePassword_Click);
+            // 
+            // openPassword
+            // 
+            this.openPassword.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.eye_open;
+            this.openPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.openPassword.Location = new System.Drawing.Point(226, 276);
+            this.openPassword.Name = "openPassword";
+            this.openPassword.Size = new System.Drawing.Size(40, 27);
+            this.openPassword.TabIndex = 7;
+            this.openPassword.UseVisualStyleBackColor = true;
+            this.openPassword.Click += new System.EventHandler(this.openPassword_Click);
             // 
             // lblPassword
             // 
@@ -89,7 +109,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Copperplate Gothic Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogin.Location = new System.Drawing.Point(45, 332);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(216, 44);
             this.btnLogin.TabIndex = 3;
@@ -101,7 +121,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(45, 276);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(184, 24);
             this.txtPassword.TabIndex = 2;
@@ -111,7 +131,7 @@
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(45, 197);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(217, 24);
             this.txtUsername.TabIndex = 1;
@@ -121,43 +141,11 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(64, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(177, 145);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(186, 255);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // openPassword
-            // 
-            this.openPassword.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.eye_open;
-            this.openPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.openPassword.Location = new System.Drawing.Point(226, 276);
-            this.openPassword.Name = "openPassword";
-            this.openPassword.Size = new System.Drawing.Size(40, 27);
-            this.openPassword.TabIndex = 7;
-            this.openPassword.UseVisualStyleBackColor = true;
-            this.openPassword.Click += new System.EventHandler(this.openPassword_Click);
-            // 
-            // closePassword
-            // 
-            this.closePassword.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.eye_closed;
-            this.closePassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closePassword.Location = new System.Drawing.Point(226, 276);
-            this.closePassword.Name = "closePassword";
-            this.closePassword.Size = new System.Drawing.Size(40, 27);
-            this.closePassword.TabIndex = 8;
-            this.closePassword.UseVisualStyleBackColor = true;
-            this.closePassword.Click += new System.EventHandler(this.closePassword_Click);
             // 
             // Login
             // 
@@ -170,7 +158,7 @@
             this.Controls.Add(this.loginform);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -193,7 +181,6 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button openPassword;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button closePassword;
     }
 }
