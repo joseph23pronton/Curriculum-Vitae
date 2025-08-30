@@ -21,6 +21,9 @@ namespace Curriculum_Vitae
                 List<Reference> references,
                 string firstName,
                 string lastName,
+                string email,
+                string contact,
+                string address,
                 string obj,
                 string college,
                 string shs,
@@ -30,7 +33,8 @@ namespace Curriculum_Vitae
                 string shsyr,
                 string jhsyr,
                 string elemyr,
-                string skills
+                string skills,
+                Image img
             )
         {
             InitializeComponent();
@@ -38,6 +42,8 @@ namespace Curriculum_Vitae
             this.lblCertTitle.Name = "lblCertTitle";
             this.lblCert1.Name = "lblCert1";
             this.lblCert1.Text = "";
+            pbImage.Image = img;
+            pbImage.SizeMode = PictureBoxSizeMode.StretchImage;
 
 
             if (certifications.Count > 0)
@@ -85,6 +91,9 @@ namespace Curriculum_Vitae
 
             this.lblFirstName.Text = $"{firstName}";
             this.lblLastName.Text = $"{lastName}";
+            this.lblEmail.Text = $"{email}";
+            this.lblContact.Text = $"{contact}";
+            this.lblHome.Text = $"{address}";
             this.lblObjective.Text = $"{obj}";
             this.lblCollege.Text = $"{college}";
             this.lblObjective.Text = $"{obj}";
@@ -99,25 +108,12 @@ namespace Curriculum_Vitae
 
         }
 
-        private void lblCertTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCert1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CV_GeneratedFormD_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void lblFullName_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblLastName_Click(object sender, EventArgs e)
         {
@@ -140,6 +136,11 @@ namespace Curriculum_Vitae
         }
 
         private void lblRef1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbImage_Click(object sender, EventArgs e)
         {
 
         }
