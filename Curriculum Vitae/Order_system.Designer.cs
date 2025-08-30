@@ -368,7 +368,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Location = new System.Drawing.Point(68, 1038);
             this.pictureBox11.Name = "pictureBox11";
@@ -490,7 +490,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(68, 945);
             this.pictureBox6.Name = "pictureBox6";
@@ -501,7 +501,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(68, 853);
             this.pictureBox7.Name = "pictureBox7";
@@ -511,7 +511,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Location = new System.Drawing.Point(68, 759);
             this.pictureBox8.Name = "pictureBox8";
@@ -521,7 +521,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(68, 667);
             this.pictureBox9.Name = "pictureBox9";
@@ -531,7 +531,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(68, 574);
             this.pictureBox10.Name = "pictureBox10";
@@ -551,7 +551,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(68, 387);
             this.pictureBox4.Name = "pictureBox4";
@@ -561,7 +561,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(68, 293);
             this.pictureBox3.Name = "pictureBox3";
@@ -571,7 +571,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.taro;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(68, 201);
             this.pictureBox2.Name = "pictureBox2";
@@ -602,11 +602,11 @@
             // lblMilktea
             // 
             this.lblMilktea.AutoSize = true;
-            this.lblMilktea.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMilktea.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMilktea.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblMilktea.Location = new System.Drawing.Point(196, 36);
+            this.lblMilktea.Location = new System.Drawing.Point(157, 36);
             this.lblMilktea.Name = "lblMilktea";
-            this.lblMilktea.Size = new System.Drawing.Size(127, 20);
+            this.lblMilktea.Size = new System.Drawing.Size(160, 26);
             this.lblMilktea.TabIndex = 1;
             this.lblMilktea.Text = "---MILKTEA---";
             // 
@@ -678,11 +678,11 @@
             // size
             // 
             this.size.AutoSize = true;
-            this.size.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.size.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.size.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.size.Location = new System.Drawing.Point(91, 36);
+            this.size.Location = new System.Drawing.Point(78, 36);
             this.size.Name = "size";
-            this.size.Size = new System.Drawing.Size(89, 20);
+            this.size.Size = new System.Drawing.Size(112, 26);
             this.size.TabIndex = 2;
             this.size.Text = "---SIZES---";
             this.size.Click += new System.EventHandler(this.size_Click);
@@ -690,11 +690,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Bright", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Bright", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(950, 90);
+            this.label3.Location = new System.Drawing.Point(938, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 20);
+            this.label3.Size = new System.Drawing.Size(149, 26);
             this.label3.TabIndex = 5;
             this.label3.Text = "---RECEIPT---";
             // 
