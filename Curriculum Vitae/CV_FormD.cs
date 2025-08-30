@@ -23,6 +23,9 @@ namespace Curriculum_Vitae
         {
             this.Text = "Input Form";
 
+            lblUserInfo.ForeColor = Color.White;
+
+
             if (Session.LoggedInUser != null)
             {
                 lblUserInfo.Text = Session.LoggedInUser.Username;
@@ -466,6 +469,14 @@ namespace Curriculum_Vitae
                     pbImage.SizeMode = PictureBoxSizeMode.Zoom; // Makes it fit nicely
                 }
             }
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Session.LoggedInUser = null;
+            this.Hide();
+            var login = new Login();
+            login.Show();
         }
     }
 }

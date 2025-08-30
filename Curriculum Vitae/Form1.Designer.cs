@@ -37,12 +37,15 @@
             this.picCSDLogo = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picUser = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblUserInfo = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.logout_btn = new System.Windows.Forms.Button();
+            this.close_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picUCCLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCSDLogo)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,9 +114,9 @@
             this.picUCCLogo.BackColor = System.Drawing.Color.Transparent;
             this.picUCCLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUCCLogo.BackgroundImage")));
             this.picUCCLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picUCCLogo.Location = new System.Drawing.Point(75, 69);
+            this.picUCCLogo.Location = new System.Drawing.Point(42, 148);
             this.picUCCLogo.Name = "picUCCLogo";
-            this.picUCCLogo.Size = new System.Drawing.Size(87, 80);
+            this.picUCCLogo.Size = new System.Drawing.Size(84, 78);
             this.picUCCLogo.TabIndex = 4;
             this.picUCCLogo.TabStop = false;
             // 
@@ -122,9 +125,9 @@
             this.picCSDLogo.BackColor = System.Drawing.Color.Transparent;
             this.picCSDLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCSDLogo.BackgroundImage")));
             this.picCSDLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCSDLogo.Location = new System.Drawing.Point(800, 58);
+            this.picCSDLogo.Location = new System.Drawing.Point(829, 137);
             this.picCSDLogo.Name = "picCSDLogo";
-            this.picCSDLogo.Size = new System.Drawing.Size(122, 109);
+            this.picCSDLogo.Size = new System.Drawing.Size(110, 93);
             this.picCSDLogo.TabIndex = 5;
             this.picCSDLogo.TabStop = false;
             // 
@@ -142,14 +145,33 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.lblUserInfo);
-            this.panel1.Controls.Add(this.picUser);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.logout_btn);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(232, 35);
-            this.panel1.TabIndex = 8;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(983, 50);
+            this.panel1.TabIndex = 25;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.lblUserInfo);
+            this.panel2.Controls.Add(this.picUser);
+            this.panel2.Location = new System.Drawing.Point(9, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(232, 35);
+            this.panel2.TabIndex = 22;
+            // 
+            // lblUserInfo
+            // 
+            this.lblUserInfo.AutoSize = true;
+            this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblUserInfo.Location = new System.Drawing.Point(51, 6);
+            this.lblUserInfo.Name = "lblUserInfo";
+            this.lblUserInfo.Size = new System.Drawing.Size(0, 25);
+            this.lblUserInfo.TabIndex = 9;
             // 
             // picUser
             // 
@@ -162,28 +184,31 @@
             this.picUser.TabIndex = 9;
             this.picUser.TabStop = false;
             // 
-            // lblUserInfo
+            // logout_btn
             // 
-            this.lblUserInfo.AutoSize = true;
-            this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblUserInfo.Location = new System.Drawing.Point(51, 6);
-            this.lblUserInfo.Name = "lblUserInfo";
-            this.lblUserInfo.Size = new System.Drawing.Size(0, 25);
-            this.lblUserInfo.TabIndex = 9;
+            this.logout_btn.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.logout_btn.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.logout;
+            this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.logout_btn.Location = new System.Drawing.Point(911, 5);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(44, 40);
+            this.logout_btn.TabIndex = 23;
+            this.logout_btn.UseVisualStyleBackColor = false;
             // 
-            // btnLogout
+            // close_btn
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Maroon;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogout.Location = new System.Drawing.Point(42, 579);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(120, 40);
-            this.btnLogout.TabIndex = 9;
-            this.btnLogout.Text = "&Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.close_btn.BackColor = System.Drawing.Color.Firebrick;
+            this.close_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_btn.ForeColor = System.Drawing.Color.White;
+            this.close_btn.Location = new System.Drawing.Point(42, 572);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(120, 40);
+            this.close_btn.TabIndex = 26;
+            this.close_btn.Text = "&Close";
+            this.close_btn.UseVisualStyleBackColor = false;
+            this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
             // Form1
             // 
@@ -192,7 +217,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.close_btn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.picCSDLogo);
@@ -208,7 +233,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picUCCLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCSDLogo)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,9 +251,11 @@
         private System.Windows.Forms.PictureBox picCSDLogo;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox picUser;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblUserInfo;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.PictureBox picUser;
+        private System.Windows.Forms.Button logout_btn;
+        private System.Windows.Forms.Button close_btn;
     }
 }
 

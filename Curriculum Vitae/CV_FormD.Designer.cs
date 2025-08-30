@@ -32,9 +32,6 @@
             this.dtpDateIssued = new System.Windows.Forms.Panel();
             this.btnInsertImg = new System.Windows.Forms.Button();
             this.pbImage = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblUserInfo = new System.Windows.Forms.Label();
-            this.picUser = new System.Windows.Forms.PictureBox();
             this.btnEditWorkEx = new System.Windows.Forms.Button();
             this.btnDeleteRef = new System.Windows.Forms.Button();
             this.btnEditRef = new System.Windows.Forms.Button();
@@ -118,9 +115,15 @@
             this.back_btn = new System.Windows.Forms.Button();
             this.generate_btn = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblUserInfo = new System.Windows.Forms.Label();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.logout_btn = new System.Windows.Forms.Button();
             this.dtpDateIssued.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,9 +133,9 @@
             this.dtpDateIssued.BackColor = System.Drawing.Color.Transparent;
             this.dtpDateIssued.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dtpDateIssued.BackgroundImage")));
             this.dtpDateIssued.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dtpDateIssued.Controls.Add(this.panel1);
             this.dtpDateIssued.Controls.Add(this.btnInsertImg);
             this.dtpDateIssued.Controls.Add(this.pbImage);
-            this.dtpDateIssued.Controls.Add(this.panel1);
             this.dtpDateIssued.Controls.Add(this.btnEditWorkEx);
             this.dtpDateIssued.Controls.Add(this.btnDeleteRef);
             this.dtpDateIssued.Controls.Add(this.btnEditRef);
@@ -228,7 +231,7 @@
             // btnInsertImg
             // 
             this.btnInsertImg.Font = new System.Drawing.Font("Lucida Sans Typewriter", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertImg.Location = new System.Drawing.Point(776, 399);
+            this.btnInsertImg.Location = new System.Drawing.Point(776, 395);
             this.btnInsertImg.Name = "btnInsertImg";
             this.btnInsertImg.Size = new System.Drawing.Size(149, 33);
             this.btnInsertImg.TabIndex = 103;
@@ -240,42 +243,11 @@
             // 
             this.pbImage.BackColor = System.Drawing.Color.LightGray;
             this.pbImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbImage.Location = new System.Drawing.Point(754, 222);
+            this.pbImage.Location = new System.Drawing.Point(764, 232);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(191, 165);
+            this.pbImage.Size = new System.Drawing.Size(169, 157);
             this.pbImage.TabIndex = 102;
             this.pbImage.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.lblUserInfo);
-            this.panel1.Controls.Add(this.picUser);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(232, 35);
-            this.panel1.TabIndex = 101;
-            // 
-            // lblUserInfo
-            // 
-            this.lblUserInfo.AutoSize = true;
-            this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblUserInfo.Location = new System.Drawing.Point(51, 6);
-            this.lblUserInfo.Name = "lblUserInfo";
-            this.lblUserInfo.Size = new System.Drawing.Size(0, 25);
-            this.lblUserInfo.TabIndex = 9;
-            // 
-            // picUser
-            // 
-            this.picUser.BackColor = System.Drawing.Color.Transparent;
-            this.picUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUser.BackgroundImage")));
-            this.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picUser.Location = new System.Drawing.Point(3, 2);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(39, 33);
-            this.picUser.TabIndex = 9;
-            this.picUser.TabStop = false;
             // 
             // btnEditWorkEx
             // 
@@ -1069,7 +1041,7 @@
             // 
             this.contact_tb.BackColor = System.Drawing.Color.WhiteSmoke;
             this.contact_tb.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact_tb.Location = new System.Drawing.Point(392, 399);
+            this.contact_tb.Location = new System.Drawing.Point(392, 395);
             this.contact_tb.Multiline = true;
             this.contact_tb.Name = "contact_tb";
             this.contact_tb.Size = new System.Drawing.Size(286, 33);
@@ -1080,7 +1052,7 @@
             this.lblNumber.AutoSize = true;
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumber.Location = new System.Drawing.Point(389, 377);
+            this.lblNumber.Location = new System.Drawing.Point(389, 373);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(125, 17);
             this.lblNumber.TabIndex = 12;
@@ -1090,7 +1062,7 @@
             // 
             this.email_tb.BackColor = System.Drawing.Color.WhiteSmoke;
             this.email_tb.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email_tb.Location = new System.Drawing.Point(49, 399);
+            this.email_tb.Location = new System.Drawing.Point(49, 395);
             this.email_tb.Multiline = true;
             this.email_tb.Name = "email_tb";
             this.email_tb.Size = new System.Drawing.Size(297, 33);
@@ -1101,7 +1073,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(46, 377);
+            this.lblEmail.Location = new System.Drawing.Point(46, 373);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(109, 17);
             this.lblEmail.TabIndex = 10;
@@ -1111,7 +1083,7 @@
             // 
             this.ln_tb.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ln_tb.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ln_tb.Location = new System.Drawing.Point(392, 319);
+            this.ln_tb.Location = new System.Drawing.Point(392, 315);
             this.ln_tb.Multiline = true;
             this.ln_tb.Name = "ln_tb";
             this.ln_tb.Size = new System.Drawing.Size(286, 33);
@@ -1122,7 +1094,7 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
             this.lblLastName.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(389, 297);
+            this.lblLastName.Location = new System.Drawing.Point(389, 293);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(83, 17);
             this.lblLastName.TabIndex = 8;
@@ -1132,7 +1104,7 @@
             // 
             this.fn_tb.BackColor = System.Drawing.Color.WhiteSmoke;
             this.fn_tb.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fn_tb.Location = new System.Drawing.Point(49, 319);
+            this.fn_tb.Location = new System.Drawing.Point(49, 315);
             this.fn_tb.Multiline = true;
             this.fn_tb.Name = "fn_tb";
             this.fn_tb.Size = new System.Drawing.Size(297, 33);
@@ -1144,7 +1116,7 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstName.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(46, 297);
+            this.lblFirstName.Location = new System.Drawing.Point(46, 293);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(86, 17);
             this.lblFirstName.TabIndex = 4;
@@ -1155,7 +1127,7 @@
             this.lblPersonalInfo.AutoSize = true;
             this.lblPersonalInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblPersonalInfo.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonalInfo.Location = new System.Drawing.Point(45, 253);
+            this.lblPersonalInfo.Location = new System.Drawing.Point(45, 249);
             this.lblPersonalInfo.Name = "lblPersonalInfo";
             this.lblPersonalInfo.Size = new System.Drawing.Size(237, 23);
             this.lblPersonalInfo.TabIndex = 3;
@@ -1193,11 +1165,66 @@
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Lucida Sans", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.title.Location = new System.Drawing.Point(232, 140);
+            this.title.Location = new System.Drawing.Point(224, 154);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(589, 38);
             this.title.TabIndex = 0;
             this.title.Text = "CURRICULUM VITAE INPUT FORM";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.logout_btn);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1135, 50);
+            this.panel1.TabIndex = 104;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.lblUserInfo);
+            this.panel2.Controls.Add(this.picUser);
+            this.panel2.Location = new System.Drawing.Point(9, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(232, 35);
+            this.panel2.TabIndex = 22;
+            // 
+            // lblUserInfo
+            // 
+            this.lblUserInfo.AutoSize = true;
+            this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblUserInfo.Location = new System.Drawing.Point(51, 6);
+            this.lblUserInfo.Name = "lblUserInfo";
+            this.lblUserInfo.Size = new System.Drawing.Size(0, 25);
+            this.lblUserInfo.TabIndex = 9;
+            // 
+            // picUser
+            // 
+            this.picUser.BackColor = System.Drawing.Color.Transparent;
+            this.picUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUser.BackgroundImage")));
+            this.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picUser.Location = new System.Drawing.Point(3, 2);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(39, 33);
+            this.picUser.TabIndex = 9;
+            this.picUser.TabStop = false;
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.logout_btn.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.logout;
+            this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.logout_btn.Location = new System.Drawing.Point(1072, 4);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(44, 40);
+            this.logout_btn.TabIndex = 23;
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // CV_FormD
             // 
@@ -1212,7 +1239,8 @@
             this.dtpDateIssued.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.ResumeLayout(false);
 
@@ -1304,10 +1332,12 @@
         private System.Windows.Forms.Button btnEditRef;
         private System.Windows.Forms.Button btnDeleteWorkEx;
         private System.Windows.Forms.Button btnEditWorkEx;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblUserInfo;
-        private System.Windows.Forms.PictureBox picUser;
         private System.Windows.Forms.PictureBox pbImage;
         private System.Windows.Forms.Button btnInsertImg;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblUserInfo;
+        private System.Windows.Forms.PictureBox picUser;
+        private System.Windows.Forms.Button logout_btn;
     }
 }
