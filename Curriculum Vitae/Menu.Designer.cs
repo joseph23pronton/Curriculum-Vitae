@@ -39,19 +39,22 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnPronton = new System.Windows.Forms.Button();
             this.btnPayroll = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblUserInfo = new System.Windows.Forms.Label();
             this.picUser = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.logout_btn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.close_btn = new System.Windows.Forms.Button();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRoberto
             // 
             this.btnRoberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnRoberto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoberto.Location = new System.Drawing.Point(111, 212);
+            this.btnRoberto.Location = new System.Drawing.Point(111, 226);
             this.btnRoberto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRoberto.Name = "btnRoberto";
             this.btnRoberto.Size = new System.Drawing.Size(320, 55);
@@ -64,7 +67,7 @@
             // 
             this.btnDagonio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDagonio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDagonio.Location = new System.Drawing.Point(111, 291);
+            this.btnDagonio.Location = new System.Drawing.Point(111, 305);
             this.btnDagonio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDagonio.Name = "btnDagonio";
             this.btnDagonio.Size = new System.Drawing.Size(320, 55);
@@ -77,7 +80,7 @@
             // 
             this.btnPadua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPadua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPadua.Location = new System.Drawing.Point(111, 372);
+            this.btnPadua.Location = new System.Drawing.Point(111, 386);
             this.btnPadua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPadua.Name = "btnPadua";
             this.btnPadua.Size = new System.Drawing.Size(320, 55);
@@ -90,19 +93,20 @@
             // 
             this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.Location = new System.Drawing.Point(558, 372);
+            this.btnOrder.Location = new System.Drawing.Point(558, 386);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(320, 55);
             this.btnOrder.TabIndex = 14;
             this.btnOrder.Text = "Ordering System\r\n";
             this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnGradingSystem
             // 
             this.btnGradingSystem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnGradingSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGradingSystem.Location = new System.Drawing.Point(558, 291);
+            this.btnGradingSystem.Location = new System.Drawing.Point(558, 305);
             this.btnGradingSystem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGradingSystem.Name = "btnGradingSystem";
             this.btnGradingSystem.Size = new System.Drawing.Size(320, 55);
@@ -114,7 +118,7 @@
             // 
             this.btnCalculator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCalculator.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculator.Location = new System.Drawing.Point(558, 212);
+            this.btnCalculator.Location = new System.Drawing.Point(558, 226);
             this.btnCalculator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalculator.Name = "btnCalculator";
             this.btnCalculator.Size = new System.Drawing.Size(320, 55);
@@ -128,7 +132,7 @@
             this.lblMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblMenu.Font = new System.Drawing.Font("Courier New", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenu.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblMenu.Location = new System.Drawing.Point(416, 61);
+            this.lblMenu.Location = new System.Drawing.Point(416, 106);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(173, 67);
             this.lblMenu.TabIndex = 15;
@@ -139,7 +143,7 @@
             this.btnBack.BackColor = System.Drawing.Color.DarkGray;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBack.Location = new System.Drawing.Point(817, 554);
+            this.btnBack.Location = new System.Drawing.Point(47, 552);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 40);
             this.btnBack.TabIndex = 17;
@@ -151,7 +155,7 @@
             // 
             this.btnPronton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPronton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPronton.Location = new System.Drawing.Point(111, 453);
+            this.btnPronton.Location = new System.Drawing.Point(111, 467);
             this.btnPronton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPronton.Name = "btnPronton";
             this.btnPronton.Size = new System.Drawing.Size(320, 55);
@@ -164,7 +168,7 @@
             // 
             this.btnPayroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnPayroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayroll.Location = new System.Drawing.Point(558, 453);
+            this.btnPayroll.Location = new System.Drawing.Point(558, 467);
             this.btnPayroll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayroll.Name = "btnPayroll";
             this.btnPayroll.Size = new System.Drawing.Size(320, 55);
@@ -172,15 +176,15 @@
             this.btnPayroll.Text = "Payroll\r\n";
             this.btnPayroll.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.lblUserInfo);
-            this.panel1.Controls.Add(this.picUser);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(232, 35);
-            this.panel1.TabIndex = 20;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.lblUserInfo);
+            this.panel2.Controls.Add(this.picUser);
+            this.panel2.Location = new System.Drawing.Point(9, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(232, 35);
+            this.panel2.TabIndex = 22;
             // 
             // lblUserInfo
             // 
@@ -203,18 +207,42 @@
             this.picUser.TabIndex = 9;
             this.picUser.TabStop = false;
             // 
-            // btnLogout
+            // logout_btn
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Maroon;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLogout.Location = new System.Drawing.Point(46, 554);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(120, 40);
-            this.btnLogout.TabIndex = 21;
-            this.btnLogout.Text = "&Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.logout_btn.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.logout_btn.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.logout;
+            this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.logout_btn.Location = new System.Drawing.Point(911, 5);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(44, 40);
+            this.logout_btn.TabIndex = 23;
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.logout_btn);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(983, 50);
+            this.panel1.TabIndex = 24;
+            // 
+            // close_btn
+            // 
+            this.close_btn.BackColor = System.Drawing.Color.Firebrick;
+            this.close_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close_btn.ForeColor = System.Drawing.Color.White;
+            this.close_btn.Location = new System.Drawing.Point(823, 552);
+            this.close_btn.Name = "close_btn";
+            this.close_btn.Size = new System.Drawing.Size(120, 40);
+            this.close_btn.TabIndex = 25;
+            this.close_btn.Text = "&Close";
+            this.close_btn.UseVisualStyleBackColor = false;
+            this.close_btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
@@ -224,7 +252,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.close_btn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPayroll);
             this.Controls.Add(this.btnPronton);
@@ -241,9 +269,10 @@
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,9 +289,11 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnPronton;
         private System.Windows.Forms.Button btnPayroll;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblUserInfo;
         private System.Windows.Forms.PictureBox picUser;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button logout_btn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button close_btn;
     }
 }

@@ -16,6 +16,7 @@ namespace Curriculum_Vitae
         public Menu()
         {
             InitializeComponent();
+            lblUserInfo.ForeColor = Color.White;
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -63,12 +64,26 @@ namespace Curriculum_Vitae
             this.Hide();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+     
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
         {
             Session.LoggedInUser = null;
             this.Hide();
             var login = new Login();
             login.Show();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            Order_system order_System = new Order_system();
+            order_System.Show();
+            this.Hide();
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Curriculum_Vitae.CV_FormD;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Curriculum_Vitae
 {
@@ -21,6 +22,9 @@ namespace Curriculum_Vitae
         private void CV_FormD_Load(object sender, EventArgs e)
         {
             this.Text = "Input Form";
+
+            lblUserInfo.ForeColor = Color.White;
+
 
             if (Session.LoggedInUser != null)
             {
@@ -396,9 +400,13 @@ namespace Curriculum_Vitae
         }
 
         private void generate_btn_Click(object sender, EventArgs e)
+      
         {
             string firstName = fn_tb.Text;
             string lastName = ln_tb.Text;
+            string email = email_tb.Text;
+            string contact = contact_tb.Text;
+            string address = street_tb.Text + " " + brgy_tb.Text + " " + zip_tb.Text + " " + city_tb.Text;
             string obj = txtObjectives.Text;
             string college = college_tb.Text;
             string shs = shs_tb.Text;
@@ -410,32 +418,65 @@ namespace Curriculum_Vitae
             string elemyr = elemyr_tb.Text;
             string skills = skills_tb.Text;
 
+            if (pbImage.Image != null)
+            {
+                var generatedFormD = new CV_GeneratedFormD(
+                    certifications,
+                    workExperiences,
+                    references,
+                    firstName,
+                    lastName,
+                    email,
+                    contact,
+                    address,
+                    obj,
+                    college,
+                    shs,
+                    jhs,
+                    elem,
+                    collegeyr,
+                    shsyr,
+                    jhsyr,
+                    elemyr,
+                    skills,
+                    pbImage.Image);
 
-
-            CV_GeneratedFormD generatedFormD = new CV_GeneratedFormD (
-                certifications, 
-                workExperiences, 
-                references,
-                firstName,
-                lastName,
-                obj,
-                college,
-                shs,
-                jhs,
-                elem,
-                collegeyr,
-                shsyr,
-                jhsyr,
-                elemyr,
-                skills
-                );
-
-            generatedFormD.Show();
+                generatedFormD.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please insert an image first.");
+            }
+        
         }
 
         private void fn_tb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInsertImg_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+                ofd.Title = "Select an Image";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    pbImage.Image = Image.FromFile(ofd.FileName);
+                    pbImage.SizeMode = PictureBoxSizeMode.Zoom; // Makes it fit nicely
+                }
+            }
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Session.LoggedInUser = null;
+            this.Hide();
+            var login = new Login();
+            login.Show();
         }
     }
 }

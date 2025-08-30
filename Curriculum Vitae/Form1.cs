@@ -15,6 +15,8 @@ namespace Curriculum_Vitae
         public Form1()
         {
             InitializeComponent();
+            lblUserInfo.ForeColor = Color.White;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,12 +64,10 @@ namespace Curriculum_Vitae
 
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+     
+        private void close_btn_Click(object sender, EventArgs e)
         {
-            Session.LoggedInUser = null;
-            this.Hide();
-            var login = new Login();
-            login.Show();
+            this.Close();
         }
     }
 }

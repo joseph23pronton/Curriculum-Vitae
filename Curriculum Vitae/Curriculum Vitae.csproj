@@ -124,6 +124,12 @@
     <Compile Include="MintChocolateCV.Designer.cs">
       <DependentUpon>MintChocolateCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order_system.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_system.Designer.cs">
+      <DependentUpon>Order_system.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pink.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MintChocolateCV.resx">
       <DependentUpon>MintChocolateCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_system.resx">
+      <DependentUpon>Order_system.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pink.resx">
       <DependentUpon>Pink.cs</DependentUpon>
