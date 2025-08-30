@@ -26,10 +26,9 @@ namespace Curriculum_Vitae
 
             var controls = new List<Control>();
             foreach (Control ctrl in this.Controls)
-        {
+            {
                 controls.Add(ctrl);
-
-        }
+            }
             this.Controls.Clear();
 
             foreach (Control ctrl in controls)
@@ -42,14 +41,14 @@ namespace Curriculum_Vitae
 
 
 
-                private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
         private void CV_Form4_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+
             if (Session.LoggedInUser != null)
             {
                 lblUserInfo.Text = Session.LoggedInUser.Username;
@@ -163,9 +162,76 @@ namespace Curriculum_Vitae
 
         }
 
+        private bool ValidateAllFields()
+        {
+            bool allValid = true;
+            StringBuilder errorMsg = new StringBuilder();
+
+            // Go through all controls in the form
+            foreach (Control ctrl in this.Controls)
+            {
+                ValidateControlRecursive(ctrl, ref allValid, errorMsg);
+            }
+
+            if (!allValid)
+            {
+                MessageBox.Show("Please fill out the following fields:\n\n" + errorMsg.ToString(),
+                                "Validation Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
+
+            return allValid;
+        }
+
+        private void ValidateControlRecursive(Control parent, ref bool allValid, StringBuilder errorMsg)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (ctrl is TextBox tb)
+                {
+                    if (string.IsNullOrWhiteSpace(tb.Text))
+                    {
+                        allValid = false;
+                        errorMsg.AppendLine("- " + (tb.Tag != null ? tb.Tag.ToString() : tb.Name));
+                        tb.BackColor = Color.LightPink; // Highlight invalid
+                    }
+                    else
+                    {
+                        tb.BackColor = Color.White;
+                    }
+                }
+                else if (ctrl is ComboBox cb)
+                {
+                    // ✅ Skip suffix ComboBox
+                    if (cb.Name == "suffix")
+                        continue;
+
+                    if (string.IsNullOrWhiteSpace(cb.Text))
+                    {
+                        allValid = false;
+                        errorMsg.AppendLine("- " + (cb.Tag != null ? cb.Tag.ToString() : cb.Name));
+                        cb.BackColor = Color.LightPink;
+                    }
+                    else
+                    {
+                        cb.BackColor = Color.White;
+                    }
+                }
+                else
+                {
+                    // Recursively check nested controls (inside panels, groupboxes, etc.)
+                    if (ctrl.HasChildren)
+                        ValidateControlRecursive(ctrl, ref allValid, errorMsg);
+                }
+            }
+        }
+
         private void button1(object sender, EventArgs e)
         {
-            string fullname = textBox2.Text +", " + textBox1.Text + " " + textBox3.Text + " " + suffix.Text;
+            if (!ValidateAllFields()) return;
+
+            string fullname = textBox2.Text + ", " + textBox1.Text + " " + textBox3.Text + " " + suffix.Text;
             string email = email_textbox.Text;
             string phonenumber = phonenumber_textbox.Text;
             string full_address = textBox7.Text + " " + textBox8.Text + " " + textBox4.Text + " " + textBox10.Text;
@@ -183,11 +249,13 @@ namespace Curriculum_Vitae
             string skills = skills_textbox.Text;
             string sex = sex_combobox.Text;
 
-
             if (pictureBox2.Image != null)
             {
                 this.Close();
-                Pink pink = new Pink(fullname, email, phonenumber, full_address, objectives, jhs, jhs_year, shs, shs_year, college, college_year, nationality, birthday, company_name, experience, skills, sex, pictureBox2.Image);
+                Pink pink = new Pink(fullname, email, phonenumber, full_address, objectives,
+                                     jhs, jhs_year, shs, shs_year, college, college_year,
+                                     nationality, birthday, company_name, experience,
+                                     skills, sex, pictureBox2.Image);
                 pink.Show();
                 this.Hide();
             }
@@ -195,7 +263,6 @@ namespace Curriculum_Vitae
             {
                 MessageBox.Show("Please insert an image first.");
             }
-            
         }
 
         private void button2_Click(object sender, EventArgs e)

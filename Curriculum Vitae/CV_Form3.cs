@@ -160,9 +160,72 @@ namespace Curriculum_Vitae
 
         }
 
-        // MODIFIED: Complete button1 method to connect to Red form
+        private bool ValidateAllFields()
+        {
+            bool allValid = true;
+            StringBuilder errorMsg = new StringBuilder();
+
+            foreach (Control ctrl in this.Controls)
+            {
+                ValidateControlRecursive(ctrl, ref allValid, errorMsg);
+            }
+
+            if (!allValid)
+            {
+                MessageBox.Show("Please fill out the following fields:\n\n" + errorMsg.ToString(),
+                                "Validation Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+            }
+
+            return allValid;
+        }
+
+        private void ValidateControlRecursive(Control parent, ref bool allValid, StringBuilder errorMsg)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (ctrl is TextBox tb)
+                {
+                    if (string.IsNullOrWhiteSpace(tb.Text))
+                    {
+                        allValid = false;
+                        errorMsg.AppendLine("- " + (tb.Tag != null ? tb.Tag.ToString() : tb.Name));
+                        tb.BackColor = Color.LightPink; // Highlight invalid
+                    }
+                    else
+                    {
+                        tb.BackColor = Color.White;
+                    }
+                }
+                else if (ctrl is ComboBox cb)
+                {
+                    // to filter or ignore something like ung combobox
+                    if (cb.Name == "suffix")
+                        continue;
+
+                    if (string.IsNullOrWhiteSpace(cb.Text))
+                    {
+                        allValid = false;
+                        errorMsg.AppendLine("- " + (cb.Tag != null ? cb.Tag.ToString() : cb.Name));
+                        cb.BackColor = Color.LightPink;
+                    }
+                    else
+                    {
+                        cb.BackColor = Color.White;
+                    }
+                }
+                else
+                {
+                    // checking inside panel or other item na nkanested
+                    if (ctrl.HasChildren)
+                        ValidateControlRecursive(ctrl, ref allValid, errorMsg);
+                }
+            }
+        }
         private void button1(object sender, EventArgs e)
         {
+            if (!ValidateAllFields()) return;
             // Collect all data from Form3 textboxes
             string fullname = textBox2.Text + ", " + textBox1.Text + " " + textBox3.Text;
             string email = textBox6.Text;

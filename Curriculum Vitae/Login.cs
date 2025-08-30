@@ -28,9 +28,7 @@ namespace Curriculum_Vitae
         {
             InitializeComponent();
             
-            pbTogglePassword.Image = Properties.Resources.eye_closed;
-            pbTogglePassword.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbTogglePassword.MouseDown += pbTogglePassword_Click;
+
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -60,22 +58,19 @@ namespace Curriculum_Vitae
 
     }
 
-        private void pbTogglePassword_Click(object sender, EventArgs e)
+        private void closePassword_Click(object sender, EventArgs e)
         {
-
-            isPasswordVisible = !isPasswordVisible;
-
-
-            if (isPasswordVisible)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-                pbTogglePassword.Image = Properties.Resources.eye_open;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = true;
-                pbTogglePassword.Image = Properties.Resources.eye_closed;
-            }
+            isPasswordVisible = false; // force hidden
+            txtPassword.UseSystemPasswordChar = true;
+            openPassword.BringToFront();
         }
+
+        private void openPassword_Click(object sender, EventArgs e)
+        {
+            isPasswordVisible = true; // force visible
+            txtPassword.UseSystemPasswordChar = false;
+            closePassword.BringToFront();
+        }
+
     }
 }
