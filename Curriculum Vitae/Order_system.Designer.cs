@@ -704,6 +704,8 @@
             this.txtReceipt.Location = new System.Drawing.Point(878, 167);
             this.txtReceipt.Multiline = true;
             this.txtReceipt.Name = "txtReceipt";
+            this.txtReceipt.ReadOnly = true;
+            this.txtReceipt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtReceipt.Size = new System.Drawing.Size(270, 376);
             this.txtReceipt.TabIndex = 6;
             // 
@@ -711,6 +713,7 @@
             // 
             this.txtTotalPrice.Location = new System.Drawing.Point(422, 454);
             this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
             this.txtTotalPrice.Size = new System.Drawing.Size(186, 22);
             this.txtTotalPrice.TabIndex = 15;
             // 
@@ -754,6 +757,7 @@
             // 
             this.txtPrice.Location = new System.Drawing.Point(115, 457);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(123, 22);
             this.txtPrice.TabIndex = 10;
             // 
@@ -783,6 +787,7 @@
             // 
             this.txtChange.Location = new System.Drawing.Point(954, 129);
             this.txtChange.Name = "txtChange";
+            this.txtChange.ReadOnly = true;
             this.txtChange.Size = new System.Drawing.Size(176, 22);
             this.txtChange.TabIndex = 17;
             // 
