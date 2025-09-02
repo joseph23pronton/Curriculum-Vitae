@@ -114,9 +114,9 @@
             this.picUCCLogo.BackColor = System.Drawing.Color.Transparent;
             this.picUCCLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUCCLogo.BackgroundImage")));
             this.picUCCLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picUCCLogo.Location = new System.Drawing.Point(42, 148);
+            this.picUCCLogo.Location = new System.Drawing.Point(66, 92);
             this.picUCCLogo.Name = "picUCCLogo";
-            this.picUCCLogo.Size = new System.Drawing.Size(84, 78);
+            this.picUCCLogo.Size = new System.Drawing.Size(76, 69);
             this.picUCCLogo.TabIndex = 4;
             this.picUCCLogo.TabStop = false;
             // 
@@ -125,7 +125,7 @@
             this.picCSDLogo.BackColor = System.Drawing.Color.Transparent;
             this.picCSDLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picCSDLogo.BackgroundImage")));
             this.picCSDLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picCSDLogo.Location = new System.Drawing.Point(829, 137);
+            this.picCSDLogo.Location = new System.Drawing.Point(827, 77);
             this.picCSDLogo.Name = "picCSDLogo";
             this.picCSDLogo.Size = new System.Drawing.Size(110, 93);
             this.picCSDLogo.TabIndex = 5;
@@ -187,15 +187,16 @@
             // logout_btn
             // 
             this.logout_btn.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.logout_btn.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.logout;
+            this.logout_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout_btn.BackgroundImage")));
             this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logout_btn.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.logout_btn.Location = new System.Drawing.Point(911, 5);
+            this.logout_btn.Location = new System.Drawing.Point(911, 8);
             this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(44, 40);
+            this.logout_btn.Size = new System.Drawing.Size(37, 31);
             this.logout_btn.TabIndex = 23;
             this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // close_btn
             // 
@@ -228,6 +229,7 @@
             this.Controls.Add(this.lnkDagonio);
             this.DoubleBuffered = true;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picUCCLogo)).EndInit();

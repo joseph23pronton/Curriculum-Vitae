@@ -471,7 +471,8 @@ namespace Curriculum_Vitae
             }
         }
 
-        private void logout_btn_Click(object sender, EventArgs e)
+    
+        private void logout_btn_Click_1(object sender, EventArgs e)
         {
             Session.LoggedInUser = null;
             this.Hide();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Curriculum_Vitae;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -154,6 +155,21 @@ namespace Calculator
             textBox1.Clear();
             display.Text = "";
             expression = "";
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Session.LoggedInUser = null;
+            this.Hide();
+            var login = new Login();
+            login.Show();
+        }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            Curriculum_Vitae.Menu form = new Curriculum_Vitae.Menu();
+            form.Show();
+            this.Hide();
         }
     }
 }

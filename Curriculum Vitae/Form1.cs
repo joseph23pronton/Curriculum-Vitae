@@ -69,5 +69,13 @@ namespace Curriculum_Vitae
         {
             this.Close();
         }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Session.LoggedInUser = null;
+            this.Hide();
+            var login = new Login();
+            login.Show();
+        }
     }
 }

@@ -237,17 +237,11 @@
                 txtPrice.Clear();
             }
 
-            private void logout_btn_Click(object sender, EventArgs e)
-            {
-                Session.LoggedInUser = null;
-                this.Hide();
-                var login = new Login();
-                login.Show();
-            }
+        
 
             private void btnBack_Click(object sender, EventArgs e)
             {
-                Form1 form = new Form1();
+                Menu form = new Menu();
                 form.Show();
                 this.Hide();
             }
@@ -261,5 +255,13 @@
             {
 
             }
+
+        private void logout_btn_Click_1(object sender, EventArgs e)
+        {
+            Session.LoggedInUser = null;
+            this.Hide();
+            var login = new Login();
+            login.Show();
         }
+    }
     }

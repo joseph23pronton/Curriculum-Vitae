@@ -92,5 +92,13 @@ namespace Curriculum_Vitae
             calculator.Show();
             this.Hide();
         }
+
+        private void logout_btn_Click_1(object sender, EventArgs e)
+        {
+            Session.LoggedInUser = null;
+            this.Hide();
+            var login = new Login();
+            login.Show();
+        }
     }
 }

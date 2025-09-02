@@ -108,21 +108,19 @@
             // 
             this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.ForeColor = System.Drawing.Color.White;
-            this.lblHome.Location = new System.Drawing.Point(63, 366);
+            this.lblHome.Location = new System.Drawing.Point(63, 367);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(193, 30);
+            this.lblHome.Size = new System.Drawing.Size(193, 69);
             this.lblHome.TabIndex = 33;
-            this.lblHome.Text = "Home";
             // 
             // lblEmail
             // 
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(63, 317);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(193, 30);
             this.lblEmail.TabIndex = 32;
-            this.lblEmail.Text = "Email\r\n";
             // 
             // lblContact
             // 
@@ -132,14 +130,13 @@
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(193, 30);
             this.lblContact.TabIndex = 31;
-            this.lblContact.Text = "Contact";
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.home_removebg_preview;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 366);
+            this.pictureBox3.Location = new System.Drawing.Point(18, 363);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.TabIndex = 30;
@@ -175,7 +172,6 @@
             this.lblSkills.Name = "lblSkills";
             this.lblSkills.Size = new System.Drawing.Size(232, 157);
             this.lblSkills.TabIndex = 27;
-            this.lblSkills.Text = "Skills";
             // 
             // lblSkillsTitle
             // 
@@ -215,7 +211,6 @@
             this.lblElemyr.Name = "lblElemyr";
             this.lblElemyr.Size = new System.Drawing.Size(74, 22);
             this.lblElemyr.TabIndex = 23;
-            this.lblElemyr.Text = "YEAR";
             // 
             // lblJhsyr
             // 
@@ -224,7 +219,6 @@
             this.lblJhsyr.Name = "lblJhsyr";
             this.lblJhsyr.Size = new System.Drawing.Size(74, 22);
             this.lblJhsyr.TabIndex = 22;
-            this.lblJhsyr.Text = "YEAR";
             // 
             // lblShsyr
             // 
@@ -233,7 +227,6 @@
             this.lblShsyr.Name = "lblShsyr";
             this.lblShsyr.Size = new System.Drawing.Size(74, 22);
             this.lblShsyr.TabIndex = 21;
-            this.lblShsyr.Text = "YEAR";
             // 
             // lblCollegeYr
             // 
@@ -242,7 +235,6 @@
             this.lblCollegeYr.Name = "lblCollegeYr";
             this.lblCollegeYr.Size = new System.Drawing.Size(74, 22);
             this.lblCollegeYr.TabIndex = 20;
-            this.lblCollegeYr.Text = "YEAR";
             // 
             // lblElementary
             // 
@@ -251,7 +243,6 @@
             this.lblElementary.Name = "lblElementary";
             this.lblElementary.Size = new System.Drawing.Size(355, 22);
             this.lblElementary.TabIndex = 19;
-            this.lblElementary.Text = "Elementary";
             // 
             // lblJunior
             // 
@@ -260,7 +251,6 @@
             this.lblJunior.Name = "lblJunior";
             this.lblJunior.Size = new System.Drawing.Size(355, 22);
             this.lblJunior.TabIndex = 18;
-            this.lblJunior.Text = "Junior High";
             this.lblJunior.Click += new System.EventHandler(this.lblJunior_Click);
             // 
             // lblSenior
@@ -270,7 +260,6 @@
             this.lblSenior.Name = "lblSenior";
             this.lblSenior.Size = new System.Drawing.Size(355, 22);
             this.lblSenior.TabIndex = 17;
-            this.lblSenior.Text = "Senior High";
             // 
             // lblCollege
             // 
@@ -279,7 +268,6 @@
             this.lblCollege.Name = "lblCollege";
             this.lblCollege.Size = new System.Drawing.Size(355, 22);
             this.lblCollege.TabIndex = 16;
-            this.lblCollege.Text = "College";
             // 
             // lblEducationTitle
             // 
@@ -309,7 +297,6 @@
             this.lblObjective.Name = "lblObjective";
             this.lblObjective.Size = new System.Drawing.Size(455, 135);
             this.lblObjective.TabIndex = 13;
-            this.lblObjective.Text = "Objective";
             // 
             // lblObjectivesTitle
             // 
@@ -327,9 +314,8 @@
             this.lblLastName.Font = new System.Drawing.Font("Castellar", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.Location = new System.Drawing.Point(285, 109);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(153, 57);
+            this.lblLastName.Size = new System.Drawing.Size(0, 57);
             this.lblLastName.TabIndex = 11;
-            this.lblLastName.Text = "last";
             this.lblLastName.Click += new System.EventHandler(this.lblLastName_Click);
             // 
             // lblFirstName
@@ -338,9 +324,8 @@
             this.lblFirstName.Font = new System.Drawing.Font("Castellar", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.Location = new System.Drawing.Point(285, 56);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(168, 57);
+            this.lblFirstName.Size = new System.Drawing.Size(0, 57);
             this.lblFirstName.TabIndex = 9;
-            this.lblFirstName.Text = "First";
             // 
             // lblCertTitle
             // 
@@ -361,7 +346,6 @@
             this.lblRef1.Name = "lblRef1";
             this.lblRef1.Size = new System.Drawing.Size(449, 108);
             this.lblRef1.TabIndex = 7;
-            this.lblRef1.Text = "References";
             this.lblRef1.Click += new System.EventHandler(this.lblRef1_Click);
             // 
             // lblWork1
@@ -371,7 +355,6 @@
             this.lblWork1.Name = "lblWork1";
             this.lblWork1.Size = new System.Drawing.Size(455, 173);
             this.lblWork1.TabIndex = 6;
-            this.lblWork1.Text = "Work Experiences";
             // 
             // lblCert1
             // 
@@ -381,7 +364,6 @@
             this.lblCert1.Name = "lblCert1";
             this.lblCert1.Size = new System.Drawing.Size(232, 248);
             this.lblCert1.TabIndex = 5;
-            this.lblCert1.Text = "Certifications";
             // 
             // CV_GeneratedFormD
             // 

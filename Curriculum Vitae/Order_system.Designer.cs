@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order_system));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.logout_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblUserInfo = new System.Windows.Forms.Label();
@@ -92,6 +91,7 @@
             this.btn_pay = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.close_btn = new System.Windows.Forms.Button();
+            this.logout_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
@@ -120,20 +120,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1245, 55);
             this.panel1.TabIndex = 0;
-            // 
-            // logout_btn
-            // 
-            this.logout_btn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.logout_btn.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.logout;
-            this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.logout_btn.Location = new System.Drawing.Point(1168, 7);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(44, 40);
-            this.logout_btn.TabIndex = 22;
-            this.logout_btn.UseVisualStyleBackColor = false;
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // label1
             // 
@@ -841,6 +827,20 @@
             this.close_btn.UseVisualStyleBackColor = false;
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click);
             // 
+            // logout_btn
+            // 
+            this.logout_btn.BackColor = System.Drawing.Color.Transparent;
+            this.logout_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout_btn.BackgroundImage")));
+            this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_btn.ForeColor = System.Drawing.Color.DimGray;
+            this.logout_btn.Location = new System.Drawing.Point(1181, 11);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(37, 31);
+            this.logout_btn.TabIndex = 25;
+            this.logout_btn.UseVisualStyleBackColor = false;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click_1);
+            // 
             // Order_system
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -902,7 +902,6 @@
         private System.Windows.Forms.Label lblUserInfo;
         private System.Windows.Forms.PictureBox picUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblMilktea;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -960,5 +959,6 @@
         private System.Windows.Forms.Button btn_pay;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button close_btn;
+        private System.Windows.Forms.Button logout_btn;
     }
 }

@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CV_FormD));
             this.dtpDateIssued = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblUserInfo = new System.Windows.Forms.Label();
+            this.picUser = new System.Windows.Forms.PictureBox();
             this.btnInsertImg = new System.Windows.Forms.Button();
             this.pbImage = new System.Windows.Forms.PictureBox();
             this.btnEditWorkEx = new System.Windows.Forms.Button();
@@ -115,16 +119,12 @@
             this.back_btn = new System.Windows.Forms.Button();
             this.generate_btn = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblUserInfo = new System.Windows.Forms.Label();
-            this.picUser = new System.Windows.Forms.PictureBox();
             this.logout_btn = new System.Windows.Forms.Button();
             this.dtpDateIssued.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpDateIssued
@@ -227,6 +227,47 @@
             this.dtpDateIssued.Size = new System.Drawing.Size(1147, 772);
             this.dtpDateIssued.TabIndex = 1;
             this.dtpDateIssued.Paint += new System.Windows.Forms.PaintEventHandler(this.dtpDateIssued_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.logout_btn);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1135, 50);
+            this.panel1.TabIndex = 104;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.lblUserInfo);
+            this.panel2.Controls.Add(this.picUser);
+            this.panel2.Location = new System.Drawing.Point(9, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(232, 35);
+            this.panel2.TabIndex = 22;
+            // 
+            // lblUserInfo
+            // 
+            this.lblUserInfo.AutoSize = true;
+            this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblUserInfo.Location = new System.Drawing.Point(51, 6);
+            this.lblUserInfo.Name = "lblUserInfo";
+            this.lblUserInfo.Size = new System.Drawing.Size(0, 25);
+            this.lblUserInfo.TabIndex = 9;
+            // 
+            // picUser
+            // 
+            this.picUser.BackColor = System.Drawing.Color.Transparent;
+            this.picUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUser.BackgroundImage")));
+            this.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picUser.Location = new System.Drawing.Point(3, 2);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(39, 33);
+            this.picUser.TabIndex = 9;
+            this.picUser.TabStop = false;
             // 
             // btnInsertImg
             // 
@@ -688,7 +729,6 @@
             this.collegeyr_tb.Name = "collegeyr_tb";
             this.collegeyr_tb.Size = new System.Drawing.Size(98, 33);
             this.collegeyr_tb.TabIndex = 49;
-            this.collegeyr_tb.Text = "(yyyy)";
             this.collegeyr_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblCollegeYr
@@ -731,7 +771,6 @@
             this.shsyr_tb.Name = "shsyr_tb";
             this.shsyr_tb.Size = new System.Drawing.Size(98, 33);
             this.shsyr_tb.TabIndex = 45;
-            this.shsyr_tb.Text = "(yyyy)";
             this.shsyr_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblSHSyr
@@ -774,7 +813,6 @@
             this.jhsyr_tb.Name = "jhsyr_tb";
             this.jhsyr_tb.Size = new System.Drawing.Size(98, 33);
             this.jhsyr_tb.TabIndex = 41;
-            this.jhsyr_tb.Text = "(yyyy)";
             this.jhsyr_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblJHSyr
@@ -797,7 +835,6 @@
             this.elemyr_tb.Name = "elemyr_tb";
             this.elemyr_tb.Size = new System.Drawing.Size(98, 33);
             this.elemyr_tb.TabIndex = 37;
-            this.elemyr_tb.Text = "(yyyy)";
             this.elemyr_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblElemYr
@@ -1171,60 +1208,19 @@
             this.title.TabIndex = 0;
             this.title.Text = "CURRICULUM VITAE INPUT FORM";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.logout_btn);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1135, 50);
-            this.panel1.TabIndex = 104;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.lblUserInfo);
-            this.panel2.Controls.Add(this.picUser);
-            this.panel2.Location = new System.Drawing.Point(9, 8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(232, 35);
-            this.panel2.TabIndex = 22;
-            // 
-            // lblUserInfo
-            // 
-            this.lblUserInfo.AutoSize = true;
-            this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblUserInfo.Location = new System.Drawing.Point(51, 6);
-            this.lblUserInfo.Name = "lblUserInfo";
-            this.lblUserInfo.Size = new System.Drawing.Size(0, 25);
-            this.lblUserInfo.TabIndex = 9;
-            // 
-            // picUser
-            // 
-            this.picUser.BackColor = System.Drawing.Color.Transparent;
-            this.picUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUser.BackgroundImage")));
-            this.picUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picUser.Location = new System.Drawing.Point(3, 2);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(39, 33);
-            this.picUser.TabIndex = 9;
-            this.picUser.TabStop = false;
-            // 
             // logout_btn
             // 
-            this.logout_btn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.logout_btn.BackgroundImage = global::Curriculum_Vitae.Properties.Resources.logout;
+            this.logout_btn.BackColor = System.Drawing.Color.Transparent;
+            this.logout_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout_btn.BackgroundImage")));
             this.logout_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logout_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logout_btn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.logout_btn.Location = new System.Drawing.Point(1072, 4);
+            this.logout_btn.ForeColor = System.Drawing.Color.DimGray;
+            this.logout_btn.Location = new System.Drawing.Point(1072, 8);
             this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(44, 40);
-            this.logout_btn.TabIndex = 23;
+            this.logout_btn.Size = new System.Drawing.Size(37, 31);
+            this.logout_btn.TabIndex = 25;
             this.logout_btn.UseVisualStyleBackColor = false;
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click_1);
             // 
             // CV_FormD
             // 
@@ -1233,15 +1229,16 @@
             this.ClientSize = new System.Drawing.Size(1147, 772);
             this.Controls.Add(this.dtpDateIssued);
             this.Name = "CV_FormD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CV_FormD";
             this.Load += new System.EventHandler(this.CV_FormD_Load);
             this.dtpDateIssued.ResumeLayout(false);
             this.dtpDateIssued.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
 
         }
