@@ -1,49 +1,73 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Curriculum_Vitae
 {
     public partial class Red : Form
     {
-        public Red()
-        {
-            InitializeComponent();
-        }
-
-        // This receives and displays data from Form3
         public Red(string fullname, string email, string phonenumber, string full_address,
                    string objectives, string jhs, string jhs_year, string shs, string shs_year,
                    string college, string college_year, string nationality, string birthday,
-                   string company_name, string experience, string skills, string sex, Image img)
+                   string company_name, string experience, string skills, string sex, Image img
+        )
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
 
-            // Put Form3 data into the red CV
-            full_name_text.Text = fullname;
-            phonenumber_label.Text = "📞 " + phonenumber;
-            email_label.Text = email;
-            address_label.Text = "📍 " + full_address;
-            objectives_label.Text = objectives;
-            jhs_label.Text = jhs;
-            jhs_year_label.Text = jhs_year;
-            shs_label.Text = shs;
-            shs_year_label.Text = shs_year;
-            college_label.Text = college;
-            college_year_label.Text = college_year;
-            nationality_label.Text = "Nationality: " + nationality;
-            birthday_label.Text = "Birthday: " + birthday;
-            company_name_label.Text = company_name;
-            experience_label.Text = experience;
-            skills_label.Text = skills;
-            sex_label.Text = "Gender: " + sex;
+            // ✅ Personal Info
+            label1.Text = fullname;
+            label11.Text = birthday;
+            label13.Text = sex;
+            label17.Text = full_address;
+            label33.Text = email;
+            label30.Text = phonenumber;
 
-            // Set the photo
+            // ✅ Education
+            label21.Text = jhs;
+            label29.Text = jhs_year;
+            label25.Text = shs;
+            label31.Text = shs_year;
+            label26.Text = college;
+            label32.Text = college_year;
+
+            // ✅ Work Experience
+            label41.Text = company_name;
+            label39.Text = experience;
+
+
+            // ✅ Skills
+            label34.Text = skills;   // <-- Added missing Skill 1
+
+
+            // ✅ Profile Picture
             pictureBox2.Image = img;
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            // ⚠️ Removed InitializeComponent(); here
+            // (Already called in constructor, duplicate causes problems)
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Red_Load(object sender, EventArgs e)
         {
 
         }

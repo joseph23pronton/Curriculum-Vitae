@@ -85,5 +85,12 @@ namespace Curriculum_Vitae
             order_System.Show();
             this.Hide();
         }
+
+        private void btnCalculator_Click(object sender, EventArgs e)
+        {
+            calcu calculator = new calcu();
+            calculator.Show();
+            this.Hide();
+        }
     }
 }
