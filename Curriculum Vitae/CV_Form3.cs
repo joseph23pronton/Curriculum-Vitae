@@ -232,10 +232,6 @@ namespace Curriculum_Vitae
             string phonenumber = textBox5.Text;
             string full_address = textBox7.Text + " " + textBox8.Text + " " + textBox4.Text + " " + textBox10.Text;
             string objectives = objective_text.Text;
-
-            // You need to add these textboxes in your Designer if they don't exist:
-            // For now, I'll use placeholder text or empty strings for missing fields
-
             string jhs = textBox19.Text; // Add textbox for JHS in designer
             string jhs_year = textBox17.Text; // Add textbox for JHS year
             string shs = textBox22.Text; // Add textbox for SHS
@@ -248,8 +244,6 @@ namespace Curriculum_Vitae
             string experience = richTextBox3.Text; // Add textbox for experience
             string skills = richTextBox4.Text; // Add textbox for skills
             string sex = sex_combobox.Text; // Add combobox or textbox for gender
-
-            // Get image from pictureBox2 (if user uploaded one)
             Image profileImage = null;
             if (pictureBox2.Image != null)
             {

@@ -16,40 +16,29 @@ namespace Curriculum_Vitae
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            // ✅ Personal Info
+
             label1.Text = fullname;
             label11.Text = birthday;
             label13.Text = sex;
             label17.Text = full_address;
             label33.Text = email;
             label30.Text = phonenumber;
-
-            // ✅ Education
             label21.Text = jhs;
             label29.Text = jhs_year;
             label25.Text = shs;
             label31.Text = shs_year;
             label26.Text = college;
             label32.Text = college_year;
-
-            // ✅ Work Experience
             label41.Text = company_name;
             label39.Text = experience;
-
-
-            // ✅ Skills
-            label34.Text = skills;   // <-- Added missing Skill 1
-
-
-            // ✅ Profile Picture
+            label34.Text = skills;  
             pictureBox2.Image = img;
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // ⚠️ Removed InitializeComponent(); here
-            // (Already called in constructor, duplicate causes problems)
+            
         }
 
         private void label30_Click(object sender, EventArgs e)

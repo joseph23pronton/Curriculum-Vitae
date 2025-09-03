@@ -203,7 +203,7 @@ namespace Curriculum_Vitae
                 }
                 else if (ctrl is ComboBox cb)
                 {
-                    // ✅ Skip suffix ComboBox
+                    // ignore suffix
                     if (cb.Name == "suffix")
                         continue;
 
@@ -295,6 +295,19 @@ namespace Curriculum_Vitae
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
+        }
+
+        private void phonenumber_textbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phonenumber_textbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
         }
     }
 }

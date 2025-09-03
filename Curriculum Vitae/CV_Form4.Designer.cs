@@ -348,9 +348,12 @@
             // phonenumber_textbox
             // 
             this.phonenumber_textbox.Location = new System.Drawing.Point(51, 447);
+            this.phonenumber_textbox.MaxLength = 11;
             this.phonenumber_textbox.Name = "phonenumber_textbox";
             this.phonenumber_textbox.Size = new System.Drawing.Size(258, 26);
             this.phonenumber_textbox.TabIndex = 39;
+            this.phonenumber_textbox.TextChanged += new System.EventHandler(this.phonenumber_textbox_TextChanged);
+            this.phonenumber_textbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phonenumber_textbox_KeyPress);
             // 
             // email_textbox
             // 
@@ -484,6 +487,7 @@
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(780, 376);
+            this.textBox17.MaxLength = 4;
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(96, 26);
             this.textBox17.TabIndex = 73;
@@ -498,6 +502,7 @@
             // textBox20
             // 
             this.textBox20.Location = new System.Drawing.Point(780, 447);
+            this.textBox20.MaxLength = 4;
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(96, 26);
             this.textBox20.TabIndex = 76;
@@ -512,6 +517,7 @@
             // textBox23
             // 
             this.textBox23.Location = new System.Drawing.Point(780, 515);
+            this.textBox23.MaxLength = 4;
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(96, 26);
             this.textBox23.TabIndex = 79;
@@ -578,7 +584,7 @@
             this.skills_textbox.Name = "skills_textbox";
             this.skills_textbox.Size = new System.Drawing.Size(218, 142);
             this.skills_textbox.TabIndex = 85;
-            this.skills_textbox.Text = "Separated by entering";
+            this.skills_textbox.Text = "";
             // 
             // gen_CV
             // 

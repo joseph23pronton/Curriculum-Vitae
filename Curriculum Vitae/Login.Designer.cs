@@ -45,7 +45,6 @@
             // loginform
             // 
             this.loginform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.loginform.Controls.Add(this.closePassword);
             this.loginform.Controls.Add(this.openPassword);
             this.loginform.Controls.Add(this.lblPassword);
             this.loginform.Controls.Add(this.lblUsername);
@@ -53,6 +52,7 @@
             this.loginform.Controls.Add(this.txtPassword);
             this.loginform.Controls.Add(this.txtUsername);
             this.loginform.Controls.Add(this.pictureBox1);
+            this.loginform.Controls.Add(this.closePassword);
             this.loginform.Location = new System.Drawing.Point(86, 105);
             this.loginform.Margin = new System.Windows.Forms.Padding(2);
             this.loginform.Name = "loginform";
